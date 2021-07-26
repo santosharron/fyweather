@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Weather API Documentation">
+    <meta name="author" content="xidhu">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" media="all">
+    <title>Epic Programmer FYWeather API</title>
+</head>
+
+<body>
+    <section class="nav-slide" id="nav-slide">
+        <div class="nav-slide-header">
+            <div class="nav-slider-icon ripple" onclick="closeNavSlide()">
+                <img src="images/close.svg" alt="Menu Icon" srcset="">
+            </div>
+            <div class="nav-slider-nav">
+                <ul class="nav-slider-nav-nav">
+                    <a href="index.html#start" onclick="closeNavSlide()">
+                        <li class="nav-item">Get Started</li>
+                    </a>
+                    <a href="index.html#data" onclick="closeNavSlide()">
+                        <li class="nav-item">Get Data</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="header">
+        <div class="header-main">
+            <div class="nav-bar-icon ripple" onclick="openNavSlide()">
+                <img src="images/menu.svg" alt="Menu Icon" srcset="">
+            </div>
+            <div class="title">
+                <img src="images/logo.svg" alt="API logo" width="70rem" height="70rem">
+                <h1 class="header-text">FYWeather API <br>Documentation</h1>
+            </div>
+            <div class="header-nav">
+                <ul class="nav">
+                    <a href="index.html#start">
+                        <li class="nav-item">Get Started</li>
+                    </a>
+                    <a href="index.html#data">
+                        <li class="nav-item">Get Data</li>
+                    </a>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="content">
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="col-md-6 doc p-4">
+                    <h4 id="start">Get Started</h4>
+                    <div class="underline"></div>
+                    <p>
+                        The FYWeather API provides programmatic access to the weather data provided by OpenWeather
+                        API.<br><br>
+                        To use this API,<strong> you don't need any API key</strong>.
+                    </p>
+                </div>
+                <div class="col-md-6 code">
+                    <div class="pre">
+                        API Endpoint
+                        <br>
+                        <a href="index.html">https://fyweather.github.io/ </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row h-100">
+                <div class="col-md-6 doc p-4">
+
+
+                    <p>
+                        To get Data from API you need to make a <strong>POST</strong> call to the following
+                        urls,<br><br>There Are 4 API calls available:<br>
+                    </p>
+                    <ol>
+                        <li>Get City Data</li>
+                        <li>Get nearby City from Coordinates</li>
+                        <li>Get Weather from city ID</li>
+                        <li>Get Weather from Coordinates</li>
+                    </ol>
+                    <div class="underline-full"></div><br><br>
+                    <h4 id="data">Get Data</h4>
+                    <div class="underline"></div>
+
+
+                    <div>
+                        <h3>Get City Data</h3><br>
+                        <div class="underline-small"></div>
+                        <p>
+                            To get city data you need to make a <strong>POST</strong> call to the following url :<br>
+
+                        </p><br>
+                        <div class="code-i">https://fyweather.github.io/city/query
+                        </div>
+                        <br><br>
+                        <br>
+                        <h2>JSON PARAMETRS</h2><br>
+                        <div class="table-pad">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>city</td>
+                                        <td>string</td>
+                                        <td>matching city name</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="underline-full"></div><br>
+
+                    <div>
+                        <h3>Get nearby City from Coordinates</h3><br>
+                        <div class="underline-small"></div>
+                        <p>
+                            To get a city nearby a specific coordinates you need to make a <strong>POST</strong> call to
+                            the following url :<br>
+
+                        </p><br>
+                        <div class="code-i">https://fyweather.github.io/city/coord
+                        </div>
+                        <br><br>
+                        <br>
+                        <h2>JSON PARAMETRS</h2><br>
+                        <div class="table-pad">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>lat</td>
+                                        <td>number</td>
+                                        <td>Location Latitude Coordinates</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lon</td>
+                                        <td>number</td>
+                                        <td>Location Longitude Coordinates</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="underline-full"></div><br>
+
+
+                    <div>
+                        <h3>Get Weather by City Id</h3><br>
+                        <div class="underline-small"></div>
+                        <p>
+                            To get the current weather in a city you need to make a <strong>POST</strong> call to the
+                            following url :<br>
+
+                        </p><br>
+                        <div class="code-i">https://fyweather.github.io/weather/id
+                        </div>
+                        <br><br>
+                        <br>
+                        <h2>JSON PARAMETRS</h2><br>
+                        <div class="table-pad">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>id</td>
+                                        <td>string</td>
+                                        <td>location Id</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="underline-full"></div><br>
+
+
+                    <div>
+                        <h3>Get Weather from Coordinates</h3><br>
+                        <div class="underline-small"></div>
+                        <p>
+                            To get the full weather data in a city near you, you need to make a <strong>POST</strong>
+                            call to the following url :<br>
+
+                        </p><br>
+                        <div class="code-i">https://fyweather.github.io/weather/coord/full
+                        </div>
+                        <br><br>
+                        <br>
+                        <h2>JSON PARAMETRS</h2><br>
+                        <div class="table-pad">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Field</th>
+                                        <th>Type</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>lat</td>
+                                        <td>number</td>
+                                        <td>Location Latitude Coordinates</td>
+                                    </tr>
+                                    <tr>
+                                        <td>lon</td>
+                                        <td>number</td>
+                                        <td>Location Longitude Coordinates</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br><br>
+
+
+                </div>
+                <div class="col-md-6 code">
+                    <div class="bash">
+                        # Here is a curl example<br><br>
+                        curl --header "Content-Type: application/json" \<br>
+                        --request <strong>POST</strong> \<br>
+                        --data '{"city":"newyork"}' \<br>
+                        https://fyweather.github.io/city/query
+                    </div>
+                    <pre>
+                    <div class="json">
+Result example :
+  [
+    {
+        "locId": 5128638,
+        "cityName": "New York",
+        "countryName": "United States",
+        "lon": -75.499901,
+        "lat": 43.000351
+        },
+        {
+        "locId": 5128581,
+        "cityName": "New York City",
+        "countryName": "United States",
+        "lon": -74.005966,
+        "lat": 40.714272
+        },
+        {
+        "locId": 5128594,
+        "cityName": "New York County",
+        "countryName": "United States",
+        "lon": -73.966248,
+        "lat": 40.783428
+        },
+        {
+        "locId": 5128616,
+        "cityName": "New York Mills",
+        "countryName": "United States",
+        "lon": -75.291283,
+        "lat": 43.10535
+        },
+        {
+        "locId": 5039192,
+        "cityName": "New York Mills",
+        "countryName": "United States",
+        "lon": -95.376152,
+        "lat": 46.518021
+        }               
+  ]
+                    
+                    </div></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <h5>© 2021 Epic Programmer All rights Reserved</h5>
+        <div class="footer-logo">
+            <h5>Created By</h5><img src="images/logo_w.png" alt="API logo" width="52rem" height="52rem">
+        </div>
+    </section>
+    <style>
+        .github-corner:hover .octo-arm {
+            animation: epic-programmer 560ms ease-in-out
+        }
+
+        @keyframes epic-programmer {
+
+            0%,
+            100% {
+                transform: rotate(0)
+            }
+
+            20%,
+            60% {
+                transform: rotate(-25deg)
+            }
+
+            40%,
+            80% {
+                transform: rotate(10deg)
+            }
+        }
+
+        @media (max-width:500px) {
+            .github-corner:hover .octo-arm {
+                animation: none
+            }
+
+            .github-corner .octo-arm {
+                animation: epic-programmer 560ms ease-in-out
+            }
+        }
+    </style>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
